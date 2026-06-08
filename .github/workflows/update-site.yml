@@ -1,0 +1,45 @@
+name: Update portfolio
+
+on:
+  push:
+    paths:
+      - "data/profile.json"
+      - "scripts/**"
+      - "Arpon_NAG_CV-1-1-1.pdf"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Optional LinkedIn sync
+        env:
+          PROXYCURL_API_KEY: ${{ secrets.PROXYCURL_API_KEY }}
+        run: python scripts/sync_linkedin.py
+        continue-on-error: true
+
+      - name: Rebuild site sections from profile data
+        run: python scripts/build_profile.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html data/profile.json
+          git commit -m "Auto-update portfolio from profile data"
+          git push

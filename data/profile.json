@@ -1,0 +1,77 @@
+{
+  "name": "Arpon Nag",
+  "title": "Computer Science & Finance student at HKU",
+  "tagline": "Software engineer, ML researcher, and entrepreneur",
+  "email": "arponnag35@gmail.com",
+  "phone": "+852 5535 1131",
+  "location": "Kennedy Town, Hong Kong",
+  "linkedin": "https://www.linkedin.com/in/arpon-nag/",
+  "github": "https://github.com/arponnag",
+  "resume": "Arpon_NAG_CV-1-1-1.pdf",
+  "about": "Arpon Nag is a Computer Science & Finance student at The University of Hong Kong, pursuing the Global Engineering and Business Programme. He is passionate about software engineering, machine learning, and building products at the intersection of technology and finance. He has experience in research, internships, and entrepreneurship — from publishing IEEE research to shipping full-stack applications.",
+  "spoken_languages": [
+    { "language": "English", "level": "Fluent" },
+    { "language": "Bengali", "level": "Native" },
+    { "language": "Hindi, Urdu, Nepali, Swedish", "level": "Basic" }
+  ],
+  "education": [
+    {
+      "school": "The University of Hong Kong (HKU)",
+      "url": "https://www.hku.hk/",
+      "dates": "September 2024 - July 2029",
+      "degree": "BEng in Computer Science & BBA in Finance — Global Engineering and Business Programme, Hong Kong",
+      "highlights": [
+        "Recipient of the Hong Kong Jockey Club Chairman's Scholarship (2024) — full-ride award for top 0.1% of international applicants",
+        "Financial Officer, Global Engineering and Business Society, HKU",
+        "Semester Exchange at Uppsala University, Sweden: Machine Learning, Cyber Security, and Statistical Risk Analysis"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "GeneNet Limited",
+      "url": "https://genenet.co/",
+      "dates": "June 2026 - August 2026",
+      "role": "AI Engineer Intern (LLM & Generative AI) — Hong Kong (HKU ITC STEM Internship Scheme)",
+      "upcoming": true,
+      "bullets": [
+        "Develop and prototype LLM-powered applications using frameworks such as LangGraph for precision medicine and bioinformatics workflows.",
+        "Optimize RAG pipelines by experimenting with vector databases, embedding models, and chunking strategies.",
+        "Write clean, scalable Python code to integrate APIs into the company's AI-driven bioinformatics platform.",
+        "Evaluate and refine model outputs to reduce hallucinations and improve latency."
+      ]
+    },
+    {
+      "company": "eBRAM",
+      "url": "https://www.ebram.com/",
+      "dates": "December 2025 - January 2026",
+      "role": "Software Engineer Intern — Central, Hong Kong",
+      "bullets": [
+        "Enhanced speech-to-text automation software, improving accuracy and performance by 15%.",
+        "Strategized and reorganized a 1,700+ line codebase, improving documentation clarity and maintainability.",
+        "Designed and implemented new UI and frontend features while coordinating development tasks and managing timelines."
+      ]
+    },
+    {
+      "company": "LaunchX Summer Entrepreneurship Program",
+      "url": "https://www.launchx.com/",
+      "dates": "August 2024 - August 2025",
+      "role": "Applicant Interviewer & Operations Intern — Remote",
+      "bullets": [
+        "Interview and evaluate 100+ applicants for summer programs offered by LaunchX.",
+        "Led and co-led student initiatives, coordinating activities and providing informal guidance to teams developing technology ventures.",
+        "Provided strategic support for planning and executing program expansion across global markets."
+      ]
+    },
+    {
+      "company": "University of California, Santa Cruz",
+      "url": "https://sip.ucsc.edu/",
+      "dates": "May 2023 - December 2023",
+      "role": "Machine Learning Research Intern — Remote",
+      "bullets": [
+        "Developed cGAN model for medical imaging (98.7% accuracy on 25k histopathology slides).",
+        "Published in IEEE Journal; reduced model inference time by 30%."
+      ]
+    }
+  ]
+}
