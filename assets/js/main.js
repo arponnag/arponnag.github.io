@@ -125,22 +125,21 @@
     }
   });
 
-  // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
-    });
-
+  // Portfolio filter (Bootstrap grid — no isotope to avoid layout glitches)
+  $(document).ready(function() {
     $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
+      var filter = $(this).data('filter');
+
+      $('#portfolio-flters li').removeClass('filter-active');
       $(this).addClass('filter-active');
 
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
+      if (filter === '*') {
+        $('.portfolio-item').fadeIn(200);
+      } else {
+        $('.portfolio-item').hide();
+        $('.portfolio-item').filter(filter).fadeIn(200);
+      }
     });
-
   });
 
   // Initiate venobox (lightbox feature used in portofilo)

@@ -737,6 +737,19 @@ section .container {
   margin-bottom: 30px;
 }
 
+.portfolio .portfolio-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio .portfolio-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 15px auto;
@@ -835,17 +848,22 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   font-weight: 600;
+  padding: 0 16px;
+  margin: 0 0 8px;
+  line-height: 1.3;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  text-transform: none;
+  padding: 0 20px;
+  margin: 0 0 12px;
+  max-width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -1106,23 +1124,35 @@ html {
 
 .portfolio-item-title {
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 12px;
+  margin: 0 0 14px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3;
 }
 
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 18px;
-  padding: 0 20px;
+.portfolio .portfolio-wrap {
+  flex: 1;
 }
 
-.portfolio .portfolio-wrap .portfolio-info p {
-  font-size: 13px;
-  line-height: 1.5;
-  text-transform: none;
-  padding: 8px 24px 0;
-  max-width: 320px;
+@media (max-width: 768px) {
+  .portfolio .portfolio-img {
+    height: 200px;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-info::before,
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    display: none;
+  }
+
+  .portfolio-item-title {
+    min-height: auto;
+    margin-bottom: 10px;
+  }
 }
 
 .interests .icon-box {
